@@ -46,6 +46,7 @@ marquee {
   margin-top: 15px;
   color: rgb(255, 40, 182);
   font-size: 20px;
+  z-index: 1000000;
 }
 
 /* 左侧文字 ==> THIS IS MUSIC */
