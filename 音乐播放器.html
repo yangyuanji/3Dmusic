@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="js音乐播放器">
+  <meta name="keyword" content="杨源吉,web前端工程师,qq1185907977,3d播放器,原生js">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>YYJ-3d播放器</title>
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+<div id="box">
+  <!-- 搜索信息展示版块  ==>默认display:none -->
+  <div id="display">
+    <div class="close"><span>X</span></div>
+    <h2>歌曲列表</h2>
+    <div id="infoBox">
+      <!-- <p>歌曲名-Redbone </p><span>听这首</span>-->
+    </div>
+  </div>
+  <!-- 左侧版块 -->
+  <div class="leftBg">
+    <div id="mask"></div>
+    <!-- 滚动信息 -->
+
+    <marquee behavior="scroll" direction="left" style="color: rgb(255,40,182)">Current version of Baidu Music Interface</marquee>
+    <!-- 文字  ==> THIS IS MUSIC -->
+    <p class="p1">3D <br>OF</p>
+    <p class="p2">MUSIC</p>
+    <!-- 白色装饰条 -->
+
+  </div>
+  <!-- 中间板块 -->
+  <div class="centerBg">
+    <!-- 搜索框+搜索按钮 -->
+    <input type="text" value="" id="search" placeholder="输入歌名或者作者，按enter或者点击搜索"  autocomplete="on"><span id="searchSpan">搜索</span>
+    <div id="bfBox">
+      <!-- 歌曲图片 -->
+      <div class="imgBox">
+        <img src="http://p2.music.126.net/34YW1QtKxJ_3YnX9ZzKhzw==/2946691234868155.jpg?param=300x300" alt="">
+      </div>
+      <!-- 歌曲信息 -->
+      <div class="info">
+        <p>成都</p>
+        <p>赵雷</p>
+        <!-- 播放器 -->
+        <audio src="http://music.163.com/song/media/outer/url?id=436514312.mp3" controls></audio>
+      </div>
+    </div>
+  </div>
+  <!-- 右侧板块 ==> 未开发 -->
+  <div id="rightBg">
+
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+<!-- <script src="./js/ajax.js"></script> -->
+
+</html>

@@ -1,0 +1,256 @@
+
+body{
+  /* 开启视距 */
+  -webkit-perspective: 1400px;
+  position: relative;
+}
+
+/* 主页面 */
+#box{
+  width: 800px;
+
+  height:500px;
+  /* background-color: rgb(255, 255, 255);*/
+  margin: 80px auto;
+  /* transition: 2s; */
+  /* 开启3D空间 */
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 0 15px 35px -5px rgba(50,88,130,.32);
+  background-color: #7312ff;
+}
+/* 左侧版块 */
+#box .leftBg{
+  width: 190px;
+  height: 440px;
+  padding: 30px;
+  position: relative;
+
+}
+
+/* 中间板块 */
+#box .centerBg{
+  width: 500px;
+  height: 500px;
+  background-color: rgb(241, 241, 241);
+}
+/* 右侧版块 */
+#box .rightBg{
+  width: 100px;
+  height: 500px;
+  background-color: #222;
+}
+/* 左侧滚动信息 */
+marquee {
+  margin-top: 15px;
+  color: rgb(255, 40, 182);
+  font-size: 20px;
+}
+
+/* 左侧文字 ==> THIS IS MUSIC */
+#box .leftBg p{
+  transform: translateZ(100px)
+
+}
+#box .leftBg .p1{
+  color: rgb(253, 0, 0);
+  font-size: 50px;
+  margin: 0;
+  padding-top:50px;
+}
+#box .leftBg .p2 {
+  color: rgb(253, 0, 0);
+  font-size: 75px;
+  font-weight: bold;
+  margin: 10px auto;
+}
+/* 左侧装饰条两根 */
+/*  #box .leftBg div{
+    width: 100%;
+    height: 5px;
+    background-color: rgb(241, 241, 241);
+    position: absolute;
+  }
+  #box .leftBg div:nth-child(4){
+    left: 0;
+    bottom:60px;
+  }
+  #box .leftBg div:nth-child(5){
+    left: 0;
+    bottom:45px;
+  }*/
+/* 搜索框样式 */
+#box #search{
+  outline:none;
+  border: none;
+  width: 250px;
+  height: 25px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: #fff;
+  margin-top: 20px;
+  margin-left: 50px;
+  padding: 5px 15px;
+}
+/* 搜索按钮样式 */
+#box #searchSpan{
+  display: inline-block;
+  padding: 5px 15px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  background-color: #222;
+  color: #fff;
+  font-size: 12px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  cursor: pointer;
+}
+/* 中间板块 播放器盒子 */
+#box .centerBg #bfBox{
+  transition: margin-left 2s;
+  width: 240px;
+  height: 330px;
+  border-radius: 10px;
+  background-color: #eef3f7;
+  margin-left:130px;
+  margin-top: 20px;
+  position: relative;
+  box-shadow: 0 15px 35px -5px rgba(50,88,130,.32);
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+}
+/* 歌曲图片样式 */
+#box .centerBg .imgBox{
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  position: absolute;
+  top: 30px;
+  left: -30px;
+  box-shadow: 0 10px 20px 0 rgba(76,70,124,.5);
+  transform: translateZ(100px)
+
+}
+#box .centerBg .imgBox img{
+  width: 160px;
+  height: 160px;
+  border-radius: 5px;
+}
+/* 歌曲信息样式 */
+#box .centerBg #bfBox .info {
+  width: 100%;
+  height: 45%;
+  z-index:1000;
+}
+#box .centerBg #bfBox .info p{
+  margin: 0;
+  color:#71829e;
+}
+#box .centerBg #bfBox .info p{
+  margin-top:15px;
+  font-size: 20px;
+  font-weight: bolder;
+  white-space: nowrap; 		/* 强制在一行显示 */
+  overflow: hidden;			/* 溢出显示不完的隐藏起来 */
+  text-overflow: ellipsis;	/* 溢出的部分加省略号 */
+  list-style: none;			/* 清除格式 */
+}
+#box .centerBg #bfBox .info p:nth-of-type(2){
+  margin-top: 5px;
+  font-size: 16px;
+}
+/* audio播放器样式 */
+#box .centerBg #bfBox .info audio{
+  width: 100%;
+  padding-top: 10px;
+  outline:none;
+}
+
+/* 搜索展示界面样式 */
+#display{
+  width: 400px;
+  height: 500px;
+  background-color: rgb(245, 238, 238);
+  box-shadow: 0 10px 20px 0 rgba(76,70,124,.5);
+  background-color: rgba(255, 255, 255, 0.7);
+  display: none;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  transform: translateZ(110px);
+  padding: 30px;
+  z-index: 100;
+}
+/* 搜索展示界面 标题====>(歌曲列表) */
+#display h2{
+  text-align: center;
+  color: rgb(255, 0, 0);
+
+}
+#display p {
+  color: #607391;
+  font-size: 12px;
+  margin: 5px 0px;
+  padding:0 10px;
+  height: 35px;
+  line-height: 35px;
+}
+#display p:hover{
+  background-color: #fff;
+}
+#display  #infoBox span {
+  margin-top: 5px;
+  float: right;
+  width: 45px;
+  height: 25px;;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: rgb(55, 110, 214);
+  box-shadow: inset 1px 1px 5px 0px rgba(50,88,130,.32);
+
+  text-align: center;
+  line-height: 25px;
+  font-size: 12px;
+  color: #ccc;
+  cursor: pointer;
+}
+/* 展示版块关闭按钮样式 */
+#display .close{
+  position: relative;
+}
+#display .close span{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: lightblue;
+  box-shadow: inset 1px 1px 5px 0px rgba(50,88,130,.32);
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+
+#infoBox p {
+  white-space: nowrap; 	/* 强制在一行显示 */
+  /*	overflow: hidden;*//* 溢出显示不完的隐藏起来 */
+  text-overflow: ellipsis;	/* 溢出的部分加省略号 */
+  list-style: none;			/* 清除格式 */
+}
+
+#mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+
+}
